@@ -20,7 +20,10 @@ if (isset($_POST["login"])) {
 
         if (mysqli_num_rows($result) === 1) {
             $data = mysqli_fetch_assoc($result);
+<<<<<<< HEAD
             
+=======
+>>>>>>> 576b185375d749f33752cc2e77735153d7fe4856
             if (password_verify($password, $data['PASSWORD'])) {
                 $_SESSION["login"] = true;
                 $_SESSION["id"] = $data['ID_KONSUMEN'];
@@ -32,10 +35,16 @@ if (isset($_POST["login"])) {
                 echo "Gagal Login";
             }
         } else {
+<<<<<<< HEAD
             var_dump($result);
         //     echo "<script>
         // alert('Username Pengguna Tidak Tersedia/Belum Terdaftar, Silahkan Registrasi!');
         // </script>";
+=======
+            echo "<script>
+        alert('Username Pengguna Tidak Tersedia/Belum Terdaftar, Silahkan Registrasi!');
+        </script>";
+>>>>>>> 576b185375d749f33752cc2e77735153d7fe4856
         }
     endif;
 }
